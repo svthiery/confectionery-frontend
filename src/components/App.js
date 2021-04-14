@@ -3,11 +3,15 @@ import '../App.css';
 import Header from "./Header";
 import ShopContainer from "./ShopContainer";
 import Cart from "./Cart";
+import Login from "./Login";
+import Signup from "./Signup";
 
 function App() {
   return (
     <div>
     <Header/>
+    <Login/>
+    <Signup/>
     <ShopContainer/>
     <Cart/>
     <div className="App">
