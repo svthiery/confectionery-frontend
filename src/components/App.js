@@ -11,6 +11,7 @@ function App() {
 
   const [showLoginModal, setShowLoginModal] = useState(false)
   const [showSignupModal, setShowSignupModal] = useState(false)
+  const [showCartModal, setShowCartModal] = useState(false)
 
   return (
     <div className="app">
@@ -18,7 +19,7 @@ function App() {
     <Login showLoginModal={showLoginModal}/>
     <Signup showSignupModal={showSignupModal}/>
     <ShopContainer/>
-    <Cart/>
+    <Cart showCartModal={showCartModal}/>
     {/* <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

@@ -1,6 +1,8 @@
-function Signup() {
+function Signup({ showSignupModal }) {
+    const toRender = showSignupModal ? (<div className="signup-modal">Sign Up</div>) : null 
+
     return (
-        <div className="signup-modal">Signup</div>
+        toRender
     );
 }
 

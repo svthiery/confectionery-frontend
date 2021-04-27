@@ -72,6 +72,25 @@ code {
 
 .shop-container {
   box-sizing: border-box;
+  padding: 0px;
+}
+
+.shop-container-image{
+  height: 270px;
+  background-image: url('./assets/gummy_worms_2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.shop-heading {
+  font-size: 150px;
+  color: white;
+  text-align: center;
+}
+
+.background-img {
+  padding: 0px;
 }
 
 .item-container {
