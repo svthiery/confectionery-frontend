@@ -1,6 +1,6 @@
 function Sort() {
     return (
-      <div>Sort</div>  
+      <div className="sort-div">Sort</div>  
     )
 }
 

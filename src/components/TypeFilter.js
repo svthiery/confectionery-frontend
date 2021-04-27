@@ -1,6 +1,6 @@
 function TypeFilter() {
     return (
-        <div>Type Filter</div>
+        <div className="type-filter-box">Type Filter</div>
     );
 }
 

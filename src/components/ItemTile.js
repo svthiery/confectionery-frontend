@@ -1,6 +1,6 @@
 function ItemTile() {
     return (
-        <div>Item Tile</div>
+        <div className="item-tile">Item Tile</div>
     );
 }
 

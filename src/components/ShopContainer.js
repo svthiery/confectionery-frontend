@@ -4,11 +4,11 @@ import ItemContainer from "./ItemContainer";
 
 function ShopContainer() {
     return (
-        <div>
-        <div>Shop Container</div>
-        <Sort />
-        <FilterContainer />
-        <ItemContainer />
+        <div className="shop-container">
+            <div>Shop Container</div>
+            <Sort />
+            <FilterContainer />
+            <ItemContainer />
         </div>
     );
 }

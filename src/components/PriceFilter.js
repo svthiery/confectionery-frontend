@@ -1,6 +1,6 @@
 function PriceFilter() {
     return (
-        <div>Price Filter</div>
+        <div className="price-filter-box">Price Filter</div>
     );
 }
 

@@ -2,7 +2,7 @@ import ItemTile from "./ItemTile";
 
 function ItemContainer() {
     return (
-        <div>Item Container</div>
+        <div className="item-container">Item Container</div>
     );
 }
 

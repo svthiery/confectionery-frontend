@@ -1,6 +1,6 @@
 function AdBanner() {
     return (
-        <div>AdBanner</div>
+        <div className="ad-banner">AdBanner</div>
     );
 }
 

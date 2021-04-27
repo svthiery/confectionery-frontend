@@ -5,7 +5,7 @@ import PriceFilter from "./PriceFilter";
 
 function FilterContainer() {
   return (
-    <div>
+    <div className="filter-container">
       <div>Filter Container</div>
       <FlavorFilter/>
       <TypeFilter/>

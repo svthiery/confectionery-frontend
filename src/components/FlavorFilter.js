@@ -1,6 +1,6 @@
 function FlavorFilter() {
     return (
-        <div>Flavor Filter</div>
+        <div className="flavor-filter-box">Flavor Filter</div>
     )
 }
 

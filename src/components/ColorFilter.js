@@ -1,6 +1,6 @@
 function ColorFilter() {
     return (
-        <div>Color Filter</div>
+        <div className="color-filter-box">Color Filter</div>
     );
 }
 
