@@ -11,3 +11,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  box-sizing: border-box;
+}
+
+/* HEADER AND SUB-COMPONENTS */
+
+.header-div {
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  box-sizing: border-box;
+}
+
+.ad-banner {
+  box-sizing: border-box;
+}
+
+.search-div {
+  box-sizing: border-box;
+}
+
+/* SHOP CONTAINER, ITEM CONTAINER, ITEM TILES */
+
+.shop-container {
+  box-sizing: border-box;
+}
+
+.item-container {
+  box-sizing: border-box;
+}
+
+.item-tile {
+  box-sizing: border-box;
+}
+
+/* FILTER CONTAINER AND SUB-FILTERS */
+
+.filter-container {
+  box-sizing: border-box;
+}
+
+.flavor-filter-box {
+  box-sizing: border-box;
+}
+
+.type-filter-box {
+  box-sizing: border-box;
+}
+
+.color-filter-box {
+  box-sizing: border-box;
+}
+
+.price-filter-box {
+  box-sizing: border-box;
+}
+
+/* LOGIN AND SIGNUP */
+
+.login-div {
+  box-sizing: border-box;
+}
+
+.signup-div {
+  box-sizing: border-box;
+}
+
+/* SORT */
+
+.sort-div {
+  box-sizing: border-box;
+}
+
+/* CART */
+
+.cart {
+  box-sizing: border-box;
+}
