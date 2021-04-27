@@ -1,6 +1,6 @@
 function Signup() {
     return (
-        <div className="signup-div">Signup</div>
+        <div className="signup-modal">Signup</div>
     );
 }
 

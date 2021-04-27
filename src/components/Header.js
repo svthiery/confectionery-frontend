@@ -4,7 +4,7 @@ import Search from "./Search";
 
 function Header() {
   return (
-    <div className="header-div">
+    <div className="header-div col-12">
       <div>Header</div>
       <AdBanner />
       <NavBar />

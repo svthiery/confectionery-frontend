@@ -1,6 +1,8 @@
-function Login() {
+function Login({showLoginModal}) {
+    const toRender = showLoginModal ? (<div className="login-modal">Login</div>) : null 
+
     return (
-        <div className="login-div">Login</div>
+        toRender
     );
 }
 

@@ -1,6 +1,6 @@
 function Search() {
     return (
-        <div className="search-div">Search</div>
+        <div className="search-modal">Search</div>
     );
 }
 

@@ -1,6 +1,8 @@
 function AdBanner() {
     return (
-        <div className="ad-banner">AdBanner</div>
+        <div className="row">
+            <div className="ad-banner col-12">AdBanner</div>
+        </div>
     );
 }
 

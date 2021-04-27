@@ -1,6 +1,8 @@
 function NavBar() {
     return (
-        <div className="nav-bar">NavBar</div>
+        <div className="row">
+            <div className="nav-bar col-12">NavBar</div>
+        </div>
     );
 }
 

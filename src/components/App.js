@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import logo from '../logo.svg';
 import '../App.css';
 import Header from "./Header";
@@ -7,11 +8,15 @@ import Login from "./Login";
 import Signup from "./Signup";
 
 function App() {
+
+  const [showLoginModal, setShowLoginModal] = useState(false)
+  const [showSignupModal, setShowSignupModal] = useState(false)
+
   return (
     <div className="app">
     <Header/>
-    <Login/>
-    <Signup/>
+    <Login showLoginModal={showLoginModal}/>
+    <Signup showSignupModal={showSignupModal}/>
     <ShopContainer/>
     <Cart/>
     {/* <div className="App">
