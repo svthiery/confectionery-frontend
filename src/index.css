@@ -60,6 +60,7 @@ code {
 
 .logo-heading {
   text-align: center;
+  text-decoration: none;
 }
 
 .nav-bar {
@@ -139,6 +140,29 @@ code {
 /* .item-name {
   position: relative;
 } */
+
+/* ITEM PAGE */
+
+.item-page-image-container {
+  box-sizing: border-box;
+}
+
+.item-page-main-container {
+  box-sizing: border-box;
+}
+
+.tiny-thumbnails {
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.indiv-tiny-thumbnail {
+  padding: 0px;
+}
+
+.main-item-img {
+  box-sizing: border-box;
+}
 
 /* FILTER CONTAINER AND SUB-FILTERS */
 
