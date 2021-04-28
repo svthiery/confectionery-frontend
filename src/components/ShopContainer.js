@@ -2,7 +2,7 @@ import Sort from "./Sort";
 import FilterContainer from "./FilterContainer";
 import ItemContainer from "./ItemContainer";
 
-function ShopContainer({ allItems }) {
+function ShopContainer({ allItems, viewedItem, setViewedItem }) {
     return (
         <div className="row">
             <div className="shop-container col-12">
@@ -11,7 +11,7 @@ function ShopContainer({ allItems }) {
                 </div>
                 {/* <img src={GummyWorms} className="background-img col-12"></img> */}
                 <FilterContainer />
-                <ItemContainer allItems={allItems}/>
+                <ItemContainer allItems={allItems} viewedItem={viewedItem} setViewedItem={setViewedItem}/>
             </div>
         </div>
     );

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from "../logo.svg";
 import "../App.css";
 import Header from "./Header";
 import ShopContainer from "./ShopContainer";
+import ItemPage from "./ItemPage";
 import Cart from "./Cart";
 import Login from "./Login";
 import Signup from "./Signup";
@@ -18,6 +20,8 @@ function App() {
   // ----------- ITEMS --------------------------------------
 
   const [allItems, setAllItems] = useState([]);
+  
+  const [viewedItem, setViewedItem] = useState(null)
 
   // ----------- USE EFFECTS ------------------------------------
 
@@ -26,34 +30,42 @@ function App() {
       .then((response) => response.json())
       .then((candiesArr) => {
         setAllItems(candiesArr);
-        console.log(allItems)
       });
   }, []);
 
   return (
     <div className="app">
-      <Header />
-      <Login showLoginModal={showLoginModal} />
-      <Signup showSignupModal={showSignupModal} />
-      <Search showSearchModal={showSearchModal} />
-      <ShopContainer allItems={allItems}/>
-      <Cart showCartModal={showCartModal} />
-      {/* <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div> */}
+      <Router>
+        <Header />
+        <Login showLoginModal={showLoginModal} />
+        <Signup showSignupModal={showSignupModal} />
+        <Search showSearchModal={showSearchModal} />
+        <Switch>
+          <Route path="/shop/:itemId">
+            <ItemPage allItems={allItems}/>
+          </Route>
+          <Route path="/">
+            <ShopContainer allItems={allItems} viewedItem={viewedItem} setViewedItem={setViewedItem}/>
+          </Route>
+        </Switch>
+        <Cart showCartModal={showCartModal} />
+        {/* <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div> */}
+    </Router>
     </div>
   );
 }
