@@ -6,18 +6,21 @@ import ShopContainer from "./ShopContainer";
 import Cart from "./Cart";
 import Login from "./Login";
 import Signup from "./Signup";
+import Search from "./Search";
 
 function App() {
 
   const [showLoginModal, setShowLoginModal] = useState(false)
   const [showSignupModal, setShowSignupModal] = useState(false)
   const [showCartModal, setShowCartModal] = useState(false)
+  const [showSearchModal, setShowSearchModal] = useState(false)
 
   return (
     <div className="app">
     <Header/>
     <Login showLoginModal={showLoginModal}/>
     <Signup showSignupModal={showSignupModal}/>
+    <Search showSearchModal={showSearchModal}/>
     <ShopContainer/>
     <Cart showCartModal={showCartModal}/>
     {/* <div className="App">

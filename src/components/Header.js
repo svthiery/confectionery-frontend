@@ -1,14 +1,12 @@
 import NavBar from "./NavBar";
 import AdBanner from "./AdBanner";
-import Search from "./Search";
 
 function Header() {
   return (
     <div className="header-div col-12">
-      <div>Header</div>
       <AdBanner />
+      <h1 className="logo-heading">THE CONFECTIONERY</h1>
       <NavBar />
-      <Search />
     </div>
   );
 }

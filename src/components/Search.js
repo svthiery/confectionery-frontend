@@ -1,6 +1,9 @@
-function Search() {
+function Search({ showSearchModal }) {
+
+    const toRender = showSearchModal ? <div className="search-modal">Search</div> : null
+
     return (
-        <div className="search-modal">Search</div>
+        toRender
     );
 }
 
