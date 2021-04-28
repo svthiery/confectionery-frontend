@@ -1,8 +1,15 @@
 import ItemTile from "./ItemTile";
 
-function ItemContainer() {
+function ItemContainer({ allItems }) {
+
+    const itemsList = allItems.map(item => {
+        return (
+            <ItemTile key={item.id} primary_img={item.primary_img}/>
+        )
+    })
+
     return (
-        <div className="item-container col-8">Item Container</div>
+        <div className="item-container col-8">{itemsList}</div>
     );
 }
 

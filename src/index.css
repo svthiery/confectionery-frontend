@@ -108,6 +108,11 @@ code {
 
 .item-tile {
   box-sizing: border-box;
+  padding: 0px;
+}
+
+.item-thumbnail {
+  box-sizing: border-box;
 }
 
 /* FILTER CONTAINER AND SUB-FILTERS */
