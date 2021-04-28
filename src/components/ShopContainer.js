@@ -1,7 +1,6 @@
 import Sort from "./Sort";
 import FilterContainer from "./FilterContainer";
 import ItemContainer from "./ItemContainer";
-import GummyWorms from "../assets/gummy_worms_2.jpg";
 
 function ShopContainer() {
     return (
