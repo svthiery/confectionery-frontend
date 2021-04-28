@@ -4,7 +4,7 @@ function ItemContainer({ allItems }) {
 
     const itemsList = allItems.map(item => {
         return (
-            <ItemTile key={item.id} primary_img={item.primary_img}/>
+            <ItemTile key={item.id} name={item.name} primary_img={item.primary_img} alt_img={item.alt_img} price={item.price}/>
         )
     })
 
