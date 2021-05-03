@@ -4,7 +4,7 @@ import ColorFilter from "./ColorFilter";
 import PriceFilter from "./PriceFilter";
 import Sort from "./Sort";
 
-function FilterContainer() {
+function FilterContainer({ flavorsSelected, setFlavorsSelected, flavorList, handleCheckBox }) {
   return (
     <div className="filter-container col-2">
       <div>Filter Container</div>
@@ -12,7 +12,7 @@ function FilterContainer() {
         <Sort/>
       </div>
       <div className="row">
-        <FlavorFilter/>
+        <FlavorFilter flavorsSelected={flavorsSelected} setFlavorsSelected={setFlavorsSelected} flavorList={flavorList} handleCheckBox={handleCheckBox}/>
       </div>
       <div className="row">
         <TypeFilter/>
