@@ -17,7 +17,10 @@ function ItemContainer({ items, viewedItem, setViewedItem }) {
     );
   });
 
-  return <div className="item-container col-8">{itemsList}</div>;
+  return <div className="item-container col-8">
+      {itemsList}
+      {itemsList.length < 1? <p>There are no items that match your search criteria!</p> : null}
+      </div>;
 }
 
 export default ItemContainer;
