@@ -6,33 +6,33 @@ import ItemContainer from "./ItemContainer";
 function ShopContainer({ allItems, viewedItem, setViewedItem }) {
   const flavorList = [
     "fruit",
-    "cookies and cream",
+    // "cookies and cream",
     "dark chocolate",
     "chocolate",
     "cookie",
-    "vanilla",
+    // "vanilla",
     "peanut butter",
     "red velvet",
     "assorted",
     "sour",
-    "biscuits",
-    "brownie",
-    "popcorn",
+    // "biscuits",
+    // "brownie",
+    // "popcorn",
     "caramel",
-    "pretzel",
-    "hazelnut",
-    "sea salt",
+    // "pretzel",
+    // "hazelnut",
+    // "sea salt",
     "espresso",
-    "bacon",
-    "cotton candy",
-    "marshmallow",
+    // "bacon",
+    // "cotton candy",
+    // "marshmallow",
   ];
 
   const [flavorsSelected, setFlavorsSelected] = useState(flavorList);
 
 
   function handleCheckBox(flavor) {
-    if(flavorsSelected.length === 21) {
+    if(flavorsSelected.length === flavorList.length) {
         const filteredFlavorList = [flavor];
         setFlavorsSelected(filteredFlavorList);
     } else if(flavorsSelected.includes(flavor)){

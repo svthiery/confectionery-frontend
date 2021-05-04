@@ -1,6 +1,6 @@
 function FilterDiv({ flavor, handleCheckBox }) {
   return (
-    <div>
+    <li>
       <input
         type="checkbox"
         id={flavor}
@@ -9,7 +9,7 @@ function FilterDiv({ flavor, handleCheckBox }) {
         onChange={(e) => handleCheckBox(e.target.value)}
       ></input>
       <label for={flavor}>{flavor}</label>
-    </div>
+    </li>
   );
 }
 

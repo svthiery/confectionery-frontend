@@ -12,7 +12,8 @@ function FlavorFilter({ flavorsSelected, setFlavorsSelected, flavorList, handleC
     return (
         <div>
             <div className="flavor-filter-box">Flavor Filter</div>
-            {flavorFilterList}
+            {flavorsSelected.length > 0 && flavorsSelected.length < flavorList.length ? <button>Clear</button> : null}
+            <ul>{flavorFilterList}</ul>
         </div>
     )
 }
