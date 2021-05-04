@@ -1,6 +1,6 @@
 function FilterDiv({ flavor, handleCheckBox }) {
   return (
-    <li>
+    <li className="filter-li">
       <input
         type="checkbox"
         id={flavor}
