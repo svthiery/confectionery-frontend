@@ -67,6 +67,12 @@ code {
   box-sizing: border-box;
 }
 
+.shopping-bag-icon {
+  box-sizing: border-box;
+  float: right;
+  margin: 0px;
+}
+
 .ad-banner {
   box-sizing: border-box;
 }
@@ -83,7 +89,7 @@ code {
   padding: 0px;
 }
 
-.shop-container-image{
+.shop-container-image {
   height: 270px;
   background-image: url('./assets/lollipop.jpg');
   background-repeat: no-repeat;

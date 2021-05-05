@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Header />
+      <Header showCartModal={showCartModal} setShowCartModal={setShowCartModal}/>
         <Login showLoginModal={showLoginModal} />
         <Signup showSignupModal={showSignupModal} />
         <Search showSearchModal={showSearchModal} />
