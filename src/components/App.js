@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import logo from "../logo.svg";
 import "../App.css";
 import Header from "./Header";
@@ -48,7 +49,7 @@ function App() {
             <ShopContainer allItems={allItems} viewedItem={viewedItem} setViewedItem={setViewedItem}/>
           </Route>
         </Switch>
-        <Cart showCartModal={showCartModal} />
+        <Cart showCartModal={showCartModal} setShowCartModal={setShowCartModal}/>
         {/* <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
