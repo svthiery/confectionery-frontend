@@ -4,7 +4,7 @@ import Sort from "./Sort";
 import FilterContainer from "./FilterContainer";
 import ItemContainer from "./ItemContainer";
 
-function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, setShowCartModal }) {
+function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, setShowCartModal, handleAddToCart }) {
   const flavorList = [
     "fruit",
     // "cookies and cream",
@@ -92,6 +92,7 @@ function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, set
             items={filteredItems}
             viewedItem={viewedItem}
             setViewedItem={setViewedItem}
+            handleAddToCart={handleAddToCart}
           />
         </div>
       </div>

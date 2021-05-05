@@ -1,6 +1,6 @@
 import ItemTile from "./ItemTile";
 
-function ItemContainer({ items, viewedItem, setViewedItem }) {
+function ItemContainer({ items, viewedItem, setViewedItem, handleAddToCart }) {
   const itemsList = items.map((item) => {
     return (
       <ItemTile
@@ -13,6 +13,7 @@ function ItemContainer({ items, viewedItem, setViewedItem }) {
         price={item.price}
         viewedItem={viewedItem}
         setViewedItem={setViewedItem}
+        handleAddToCart={handleAddToCart}
       />
     );
   });
