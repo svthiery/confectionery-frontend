@@ -48,15 +48,32 @@ function App() {
       .then((response) => response.json())
       .then((newOrder) => {
         console.log("Success:", newOrder);
-        setCurrentCart(newOrder)
+        setCurrentOrder(newOrder)
       })
   }, []);
 
   // ----------- CART --------------------------------------------
+  const [currentOrder, setCurrentOrder] = useState(null)
   const [currentCart, setCurrentCart] = useState([]);
 
   function handleAddToCart(item) {
     console.log(item);
+    
+  }
+
+  function addItemToOrder(item) {
+    fetch("http://localhost:3001/orders", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({user_id: 1, status: "open"}),
+    })
+      .then((response) => response.json())
+      .then((newOrder) => {
+        console.log("Success:", newOrder);
+        setCurrentCart(newOrder)
+      })
   }
 
   return (
