@@ -143,6 +143,51 @@ code {
   box-sizing: border-box;
 }
 
+.item-price {
+  margin-bottom: 5px;
+}
+
+.add-to-cart-div {
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  padding: 0px;
+  position: relative;
+}
+
+.add-to-cart-btn {
+  box-sizing: border-box;
+  /* display: inline-block; */
+  margin: 0 auto;
+  /* position: absolute; */
+  /* width: 500px; */
+  /* left:0; */
+  opacity: 0;
+  transition: opacity .35s ease;
+  z-index: 1;
+
+  background-color: #51c4d3;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+}
+
+.add-to-cart-div:hover .add-to-cart-btn {
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+/* .add-to-cart-div:hover > .add-to-cart-btn {
+  box-sizing: border-box;
+  display: block;
+} */
+
 /* .item-name {
   position: relative;
 } */

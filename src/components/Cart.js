@@ -27,12 +27,7 @@ function Cart ({ showCartModal, setShowCartModal }) {
           >
             &times;
           </button>
-          <h2 className="text-4xl capitalize leading-loose">hello!</h2>
-          <p className="leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </p>
+          <h2 className="text-4xl capitalize leading-loose">Your Cart</h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}

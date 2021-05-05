@@ -14,7 +14,7 @@ function FilterContainer({ flavorsSelected, setFlavorsSelected, flavorList, hand
       <div className="row">
         <FlavorFilter flavorsSelected={flavorsSelected} setFlavorsSelected={setFlavorsSelected} flavorList={flavorList} handleCheckBox={handleCheckBox}/>
       </div>
-      <div className="row">
+      {/* <div className="row">
         <TypeFilter/>
       </div>
       <div className="row">
@@ -22,7 +22,7 @@ function FilterContainer({ flavorsSelected, setFlavorsSelected, flavorList, hand
       </div>
       <div className="row">
         <PriceFilter/>
-        </div>
+        </div> */}
     </div>
   );
 }

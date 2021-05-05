@@ -24,6 +24,8 @@ function App() {
   
   const [viewedItem, setViewedItem] = useState(null)
 
+  const [currentCart, setCurrentCart] = useState([])
+
   // ----------- USE EFFECTS ------------------------------------
 
   useEffect(() => {
@@ -33,6 +35,8 @@ function App() {
         setAllItems(candiesArr);
       });
   }, []);
+
+  // ----------- CART --------------------------------------------
 
   return (
     <div className="app">
