@@ -43,10 +43,10 @@ function App() {
         <Search showSearchModal={showSearchModal} />
         <Switch>
           <Route path="/shop/:itemId">
-            <ItemPage allItems={allItems}/>
+            <ItemPage allItems={allItems} showCartModal={showCartModal} setShowCartModal={setShowCartModal}/>
           </Route>
           <Route path="/">
-            <ShopContainer allItems={allItems} viewedItem={viewedItem} setViewedItem={setViewedItem}/>
+            <ShopContainer allItems={allItems} viewedItem={viewedItem} setViewedItem={setViewedItem} showCartModal={showCartModal} setShowCartModal={setShowCartModal}/>
           </Route>
         </Switch>
         <Cart showCartModal={showCartModal} setShowCartModal={setShowCartModal}/>

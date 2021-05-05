@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,7 +10,7 @@ import {
     useParams
   } from "react-router-dom";
 
-function ItemPage({ allItems}) {
+function ItemPage({ allItems, showCartModal, setShowCartModal }) {
 
     let { itemId } = useParams();
 
@@ -21,6 +23,13 @@ function ItemPage({ allItems}) {
     }
 
     return (
+        <motion.div
+      animate={{
+        // scale: showCartModal ? 0.8 : 1,
+        opacity: showCartModal ? 0.5 : 1,
+      }}
+      transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+    >
         <div className="row">
             <div className="item-page-image-container col-5">
                 <div className="row">
@@ -37,6 +46,7 @@ function ItemPage({ allItems}) {
                 <h2>{selectedItem.name}</h2>
             </div>
         </div>
+        </motion.div>
     );
 }
 

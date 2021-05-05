@@ -245,10 +245,10 @@ input[type=checkbox]:not(:checked) {
   box-sizing: border-box;
   opacity: 1;
   position: fixed;
-  background: blue;
-  width: 35%;
+  background: #51c4d3;
+  width: 30%;
   height: 100%;
-  top: 50%;
+  top: 0%;
   left: 70%;
   right: 0%;
   transform: translate(-50%, -50%);
