@@ -13,6 +13,7 @@ import Search from "./Search";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [currentOrder, setCurrentOrder] = useState(null);
 
   // ----------- MODALS STATE -------------------------------------
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -53,8 +54,6 @@ function App() {
   }, []);
 
   // ----------- CART --------------------------------------------
-  const [currentOrder, setCurrentOrder] = useState(null);
-  // const [currentCart, setCurrentCart] = useState([]);
 
   function handleAddToCart(item) {
     // console.log(item);
@@ -122,6 +121,8 @@ function App() {
         <Cart
           showCartModal={showCartModal}
           setShowCartModal={setShowCartModal}
+          currentOrder={currentOrder}
+          setCurrentOrder={setCurrentOrder}
         />
         {/* <div className="App">
         <header className="App-header">

@@ -1,7 +1,19 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-function Cart ({ showCartModal, setShowCartModal }) {
+function Cart ({ showCartModal, setShowCartModal, currentOrder, setCurrentOrder }) {
     // const toRender = showCartModal ? <div className="cart">Cart</div> : null
+        const currentCart = currentOrder ? currentOrder.candyOrders.map(candyOrder => {
+            return (
+                <div>
+                    <div>{candyOrder.candy.name}</div>
+                    <div>{candyOrder.candy.price}</div>
+                </div>
+            )
+        }) :
+        null
+        // console.log(currentOrder)
+        // console.log(currentCart)
 
     function handleCloseCart() {
         setShowCartModal(false)
@@ -28,6 +40,7 @@ function Cart ({ showCartModal, setShowCartModal }) {
             &times;
           </button>
           <h2 className="text-4xl capitalize leading-loose">Your Cart</h2>
+          <div>{currentCart}</div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
