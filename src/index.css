@@ -33,7 +33,7 @@ code {
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -65,12 +65,21 @@ code {
 
 .nav-bar {
   box-sizing: border-box;
+  /* border: 0px; */
 }
 
-.shopping-bag-icon {
+.bag-search-profile-links {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+  /* border: 0px; */
+}
+
+.bag-search-profile-icon {
   box-sizing: border-box;
   float: right;
   margin: 0px;
+  padding: 0px;
 }
 
 .ad-banner {

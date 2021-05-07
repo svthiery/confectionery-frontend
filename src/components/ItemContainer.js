@@ -18,7 +18,7 @@ function ItemContainer({ items, viewedItem, setViewedItem, handleAddToCart }) {
     );
   });
 
-  return <div className="item-container col-9">
+  return <div className="item-container col-8">
       {itemsList}
       {itemsList.length < 1? <p>There are no items that match your search criteria!</p> : null}
       </div>;
