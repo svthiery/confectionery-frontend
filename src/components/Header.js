@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import AdBanner from "./AdBanner";
 import ShoppingBag from "../assets/shopping_bag.jpg"
 import MagnifyingGlass from "../assets/search_icon.png"
+import ProfileIcon from "../assets/profile_icon.png"
 
 function Header({ showCartModal, setShowCartModal }) {
 
@@ -24,6 +25,7 @@ function Header({ showCartModal, setShowCartModal }) {
         <div className="bag-search-profile-links col-1">
             <img src={ShoppingBag} className="bag-search-profile-icon col-4" onClick={handleCartClick}></img>
             <img src={MagnifyingGlass} className="bag-search-profile-icon col-4"></img>
+            <img src={ProfileIcon} className="bag-search-profile-icon col-4"></img>
         </div>
         <NavBar />
         </div>
