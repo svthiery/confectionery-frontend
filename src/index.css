@@ -90,7 +90,8 @@ code {
 }
 
 .shop-container-image {
-  height: 270px;
+  /* box-sizing: border-box; */
+  height: 290px;
   background-image: url('./assets/lollipop.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
