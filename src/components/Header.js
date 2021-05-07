@@ -30,11 +30,10 @@ function Header({ showCartModal, setShowCartModal, currentOrder }) {
             src={ProfileIcon}
             className="bag-search-profile-icon col-4"
           ></img>
-          <div className="bag-container col-4">
+          <div className="bag-container col-4" onClick={handleCartClick}>
             <img
               src={ShoppingBag}
               className="bag-search-profile-icon col-12"
-              onClick={handleCartClick}
             ></img>
             <div className="num-items">{numItems}</div>
           </div>
