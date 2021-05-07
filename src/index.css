@@ -55,6 +55,15 @@ code {
 
 @media only screen and (max-width: 1300px) {
   /* For tablets: */
+
+  .col-8 {
+    width: 91.66%;
+  }
+
+  .filter-container {
+    display: none;
+  }
+
   .num-items {
     display: none;
     box-sizing: border-box;
