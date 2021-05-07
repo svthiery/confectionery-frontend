@@ -95,6 +95,7 @@ function App() {
         <Header
           showCartModal={showCartModal}
           setShowCartModal={setShowCartModal}
+          currentOrder={currentOrder}
         />
         <Login showLoginModal={showLoginModal} />
         <Signup showSignupModal={showSignupModal} />
