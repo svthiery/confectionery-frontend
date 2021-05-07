@@ -12,7 +12,6 @@ import Signup from "./Signup";
 import Search from "./Search";
 
 function App() {
-
   const [currentUser, setCurrentUser] = useState(null);
 
   // ----------- MODALS STATE -------------------------------------
@@ -38,43 +37,58 @@ function App() {
   }, []);
 
   useEffect(() => {
+    // Need to add conditional here, so if user is logged in, fetch their orders and if there is an open order, those items will be in the cart
     fetch("http://localhost:3001/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({user_id: 1, status: "open"}),
+      body: JSON.stringify({ user_id: 1, status: "open" }),
     })
       .then((response) => response.json())
       .then((newOrder) => {
         console.log("Success:", newOrder);
-        setCurrentOrder(newOrder)
-      })
+        setCurrentOrder(newOrder);
+      });
   }, []);
 
   // ----------- CART --------------------------------------------
-  const [currentOrder, setCurrentOrder] = useState(null)
-  const [currentCart, setCurrentCart] = useState([]);
+  const [currentOrder, setCurrentOrder] = useState(null);
+  // const [currentCart, setCurrentCart] = useState([]);
 
   function handleAddToCart(item) {
-    console.log(item);
-    
-  }
-
-  function addItemToOrder(item) {
-    fetch("http://localhost:3001/orders", {
-      method: "PATCH",
+    // console.log(item);
+    // console.log(currentOrder.id)
+    fetch("http://localhost:3001/candy_orders", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({user_id: 1, status: "open"}),
+      body: JSON.stringify({ order_id: currentOrder.id, candy_id: item.id}),
     })
       .then((response) => response.json())
-      .then((newOrder) => {
-        console.log("Success:", newOrder);
-        setCurrentCart(newOrder)
-      })
+      .then((candyOrderObj) => {
+        // console.log("Success:", candyOrderObj);
+        // console.log(currentOrder.candyOrders)
+        const updatedCandies = [...currentOrder.candyOrders, candyOrderObj]
+        setCurrentOrder({...currentOrder, candyOrders: updatedCandies})
+      });
   }
+  console.log(currentOrder)
+  // function addItemToOrder(item) {
+  //   fetch("http://localhost:3001/orders", {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ user_id: 1, status: "open" }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((newOrder) => {
+  //       console.log("Success:", newOrder);
+  //       setCurrentCart(newOrder);
+  //     });
+  // }
 
   return (
     <div className="app">

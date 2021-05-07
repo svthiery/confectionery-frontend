@@ -23,9 +23,9 @@ function Header({ showCartModal, setShowCartModal }) {
     <h1 className="logo-heading" onClick={handleClickLogo}>THE CONFECTIONERY</h1>
     <div className="row">
         <div className="bag-search-profile-links col-1">
+            <img src={ProfileIcon} className="bag-search-profile-icon col-4"></img>
             <img src={ShoppingBag} className="bag-search-profile-icon col-4" onClick={handleCartClick}></img>
             <img src={MagnifyingGlass} className="bag-search-profile-icon col-4"></img>
-            <img src={ProfileIcon} className="bag-search-profile-icon col-4"></img>
         </div>
         <NavBar />
         </div>
