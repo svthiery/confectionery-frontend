@@ -30,7 +30,7 @@ function App() {
   // ----------- USE EFFECTS ------------------------------------
 
   useEffect(() => {
-    fetch("http://localhost:3001/candies")
+    fetch("https://gentle-depths-95024.herokuapp.com/candies")
       .then((response) => response.json())
       .then((candiesArr) => {
         setAllItems(candiesArr);
@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     // Need to add conditional here, so if user is logged in, fetch their orders and if there is an open order, those items will be in the cart
-    fetch("http://localhost:3001/orders", {
+    fetch("https://gentle-depths-95024.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ function App() {
   function handleAddToCart(item) {
     // console.log(item);
     // console.log(currentOrder.id)
-    fetch("http://localhost:3001/candy_orders", {
+    fetch("https://gentle-depths-95024.herokuapp.com/candy_orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
