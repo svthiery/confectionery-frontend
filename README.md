@@ -8,7 +8,7 @@ The Confectionery uses the following technologies:
 
 ### Frontend
 
-React, React Router, Custom CSS
+React, React Router, Custom CSS, CSS media queries
 
 ### Backend
 
