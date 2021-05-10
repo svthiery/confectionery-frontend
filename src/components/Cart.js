@@ -7,14 +7,14 @@ function Cart ({ showCartModal, setShowCartModal, currentOrder, setCurrentOrder 
             return (
                 <div>
                     <div>{candyOrder.candy.name}</div>
-                    <div>{candyOrder.candy.price}</div>
+                    <div>${candyOrder.candy.price}</div>
                 </div>
             )
         }) :
         null
         // console.log(currentOrder)
         // console.log(currentCart)
-
+        
     function handleCloseCart() {
         setShowCartModal(false)
     }
