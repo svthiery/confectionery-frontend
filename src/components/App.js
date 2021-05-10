@@ -71,6 +71,7 @@ function App() {
         // console.log(currentOrder.candyOrders)
         const updatedCandies = [...currentOrder.candyOrders, candyOrderObj]
         setCurrentOrder({...currentOrder, candyOrders: updatedCandies})
+        setShowCartModal(true)
       });
   }
   console.log(currentOrder)
