@@ -2,6 +2,8 @@
 
 The Confectionery is an e-commerce site with responsive design.
 
+Deployed at https://theconfectionery.netlify.app/
+
 ## Technologies
 
 The Confectionery uses the following technologies:
