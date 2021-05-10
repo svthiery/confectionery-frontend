@@ -7,10 +7,10 @@ import Sort from "./Sort";
 function FilterContainer({ flavorsSelected, setFlavorsSelected, flavorList, handleCheckBox }) {
   return (
     <div className="filter-container col-2">
-      <div>Filter Container</div>
-      <div className="row">
+      {/* <div>Filter Container</div> */}
+      {/* <div className="row">
         <Sort/>
-      </div>
+      </div> */}
       <div className="row">
         <FlavorFilter flavorsSelected={flavorsSelected} setFlavorsSelected={setFlavorsSelected} flavorList={flavorList} handleCheckBox={handleCheckBox}/>
       </div>
