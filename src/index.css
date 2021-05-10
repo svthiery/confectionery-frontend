@@ -132,6 +132,9 @@ code {
 
 .ad-banner {
   box-sizing: border-box;
+  text-align: center;
+  background-color: #98acf8;
+  height: 50px;
 }
 
 .search-modal {
