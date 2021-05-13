@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import ReactLoading from 'react-loading';
+import ReactLoading from "react-loading";
 import Sort from "./Sort";
 import FilterContainer from "./FilterContainer";
 import ItemContainer from "./ItemContainer";
 
-function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, setShowCartModal, handleAddToCart, isItemsLoading }) {
+function ShopContainer({
+  allItems,
+  viewedItem,
+  setViewedItem,
+  showCartModal,
+  setShowCartModal,
+  handleAddToCart,
+  isItemsLoading,
+}) {
   const flavorList = [
     "fruit",
     // "cookies and cream",
@@ -82,21 +90,34 @@ function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, set
           <div className="shop-container-image">
             <h1 className="shop-heading">SHOP</h1>
           </div>
-          {/* <img src={GummyWorms} className="background-img col-12"></img> */}
-          <FilterContainer
+          {/* <FilterContainer
+            flavorsSelected={flavorsSelected}
+            setFlavorsSelected={setFlavorsSelected}
+            flavorList={flavorList}
+            handleCheckBox={handleCheckBox}
+          /> */}
+          {isItemsLoading ? (
+              <div className="col-12 items-loading-animation-outer">
+                <div className="items-loading-animation">
+                    <ReactLoading type={"spokes"} color={"grey"} />
+                </div>
+            </div>
+          ) : (
+              <>
+            <FilterContainer
             flavorsSelected={flavorsSelected}
             setFlavorsSelected={setFlavorsSelected}
             flavorList={flavorList}
             handleCheckBox={handleCheckBox}
           />
-          {isItemsLoading ? <div> 
-       <ReactLoading type={"bars"} color={"grey"} />
-     </div> : <ItemContainer
-            items={filteredItems}
-            viewedItem={viewedItem}
-            setViewedItem={setViewedItem}
-            handleAddToCart={handleAddToCart}
-          />}
+            <ItemContainer
+              items={filteredItems}
+              viewedItem={viewedItem}
+              setViewedItem={setViewedItem}
+              handleAddToCart={handleAddToCart}
+            />
+            </>
+          )}
           {/* <ItemContainer
             items={filteredItems}
             viewedItem={viewedItem}

@@ -144,6 +144,17 @@ code {
 
 /* SHOP CONTAINER, ITEM CONTAINER, ITEM TILES */
 
+.items-loading-animation {
+  box-sizing: border-box;
+  margin-left: 45%;
+  margin-top: 10%;
+  align-content: center;
+}
+
+.items-loading-animation-outer {
+  box-sizing: border-box;
+}
+
 .shop-container {
   box-sizing: border-box;
   padding: 0px;
