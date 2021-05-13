@@ -99,7 +99,7 @@ function ShopContainer({
           {isItemsLoading ? (
               <div className="col-12 items-loading-animation-outer">
                 <div className="items-loading-animation">
-                    <ReactLoading type={"spokes"} color={"grey"} />
+                    <ReactLoading type={"spokes"} color={"grey"} height={'15%'} width={'15%'}/>
                 </div>
             </div>
           ) : (
