@@ -37,7 +37,7 @@ function App() {
       .then((response) => response.json())
       .then((candiesArr) => {
         setAllItems(candiesArr);
-        // setIsItemsLoading(false);
+        setIsItemsLoading(false);
       });
   }, []);
 
