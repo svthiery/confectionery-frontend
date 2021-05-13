@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import ReactLoading from 'react-loading';
 import Sort from "./Sort";
 import FilterContainer from "./FilterContainer";
 import ItemContainer from "./ItemContainer";
 
-function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, setShowCartModal, handleAddToCart }) {
+function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, setShowCartModal, handleAddToCart, isItemsLoading }) {
   const flavorList = [
     "fruit",
     // "cookies and cream",
@@ -88,12 +89,20 @@ function ShopContainer({ allItems, viewedItem, setViewedItem, showCartModal, set
             flavorList={flavorList}
             handleCheckBox={handleCheckBox}
           />
-          <ItemContainer
+          {isItemsLoading ? <div> 
+       <ReactLoading type={"bars"} color={"grey"} />
+     </div> : <ItemContainer
             items={filteredItems}
             viewedItem={viewedItem}
             setViewedItem={setViewedItem}
             handleAddToCart={handleAddToCart}
-          />
+          />}
+          {/* <ItemContainer
+            items={filteredItems}
+            viewedItem={viewedItem}
+            setViewedItem={setViewedItem}
+            handleAddToCart={handleAddToCart}
+          /> */}
         </div>
       </div>
     </motion.div>

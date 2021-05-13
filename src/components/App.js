@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import ReactLoading from 'react-loading';
 import logo from "../logo.svg";
 import "../App.css";
 import Header from "./Header";
@@ -26,6 +27,8 @@ function App() {
   const [allItems, setAllItems] = useState([]);
 
   const [viewedItem, setViewedItem] = useState(null);
+
+  const [isItemsLoading, setIsItemsLoading] = useState(true)
 
   // ----------- USE EFFECTS ------------------------------------
 
@@ -117,6 +120,7 @@ function App() {
               showCartModal={showCartModal}
               setShowCartModal={setShowCartModal}
               handleAddToCart={handleAddToCart}
+              isItemsLoading={isItemsLoading}
             />
           </Route>
         </Switch>
