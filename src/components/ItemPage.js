@@ -34,11 +34,11 @@ function ItemPage({ allItems, showCartModal, setShowCartModal }) {
             <div className="item-page-image-container col-5">
                 <div className="row">
                     <div className="tiny-thumbnails col-2">
-                        <img src={selectedItem.primary_img} className="col-12 indiv-tiny-thumbnail" onClick={handleImgClick}></img>
-                        <img src={selectedItem.alt_img} className="col-12 indiv-tiny-thumbnail" onClick={handleImgClick}></img>
+                        <img src={selectedItem.primary_img} alt={selectedItem.name} className="col-12 indiv-tiny-thumbnail" onClick={handleImgClick}></img>
+                        <img src={selectedItem.alt_img} alt={`Close-up of ${selectedItem.name}`} className="col-12 indiv-tiny-thumbnail" onClick={handleImgClick}></img>
                     </div>
                     <div className="col-8">
-                        <img src={imgView} className="main-item-img col-12"></img>
+                        <img src={imgView} alt={selectedItem.name} className="main-item-img col-12"></img>
                     </div>
                 </div>
             </div>

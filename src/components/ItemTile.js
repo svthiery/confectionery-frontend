@@ -28,9 +28,10 @@ function ItemTile({
     <div className="item-tile col-4" onClick={handleClickItem}>
     <Link to={`/shop/${id}`}>
         <div className="figure item-thumbnail col-12">
-          <img src={primary_img} className="item-thumbnail col-12"></img>
+          <img src={primary_img} alt={name} className="item-thumbnail col-12"></img>
           <img
             src={alt_img}
+            alt={`Close-up of ${name}`}
             className="item-thumbnail item-thumbnail-alt col-12"
           ></img>
         </div>
