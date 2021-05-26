@@ -71,8 +71,6 @@ function App() {
     })
       .then((response) => response.json())
       .then((candyOrderObj) => {
-        // console.log("Success:", candyOrderObj);
-        // console.log(currentOrder.candyOrders)
         const updatedCandies = [...currentOrder.candyOrders, candyOrderObj]
         setCurrentOrder({...currentOrder, candyOrders: updatedCandies})
         setShowCartModal(true)
