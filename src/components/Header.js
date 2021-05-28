@@ -20,7 +20,7 @@ function Header({ showCartModal, setShowCartModal, currentOrder }) {
 
   return (
     <div className="header-div col-12">
-      {/* <AdBanner /> */}
+      <AdBanner />
       <h1 className="logo-heading" onClick={handleClickLogo}>
         THE CONFECTIONERY
       </h1>
