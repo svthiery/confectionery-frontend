@@ -128,14 +128,14 @@ code {
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: red;
+  background-color: #98acf8;
 }
 
 .subnav-content {
   display: none;
   position: absolute;
   left: 0;
-  background-color: red;
+  background-color: #98acf8;
   width: 100%;
   z-index: 1;
 }
@@ -144,11 +144,12 @@ code {
   float: left;
   color: white;
   text-decoration: none;
+  padding: 12px;
 }
 
 .subnav-content a:hover {
   background-color: #eee;
-  color: black;
+  color: #98acf8;
 }
 
 .subnav:hover .subnav-content {
