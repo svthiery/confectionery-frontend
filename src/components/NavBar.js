@@ -19,8 +19,8 @@ function NavBar() {
           </button>
           <div class="subnav-content">
             <a href="https://www.linkedin.com/in/svk12/">LinkedIn</a>
-            <a href="#team">GitHub</a>
-            <a href="#careers">Email Me</a>
+            <a href="https://github.com/svthiery">GitHub</a>
+            <a href="mailto:sarahvthiery@gmail.com">Email Me</a>
           </div>
         </div>
       </nav>
