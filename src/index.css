@@ -417,6 +417,23 @@ input[type=checkbox]:not(:checked) {
 
 .login-modal {
   box-sizing: border-box;
+  opacity: 1;
+  position: fixed;
+  background: #51c4d3;
+  width: 30%;
+  height: 35%;
+  top: 30%;
+  left: 70%;
+  /* right: 0%; */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.login-modal-content {
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  color: white;
 }
 
 .signup-modal {

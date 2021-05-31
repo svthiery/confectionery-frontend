@@ -99,8 +99,11 @@ function App() {
           showCartModal={showCartModal}
           setShowCartModal={setShowCartModal}
           currentOrder={currentOrder}
+          setShowLoginModal={setShowLoginModal}
         />
-        <Login showLoginModal={showLoginModal} />
+        <Login 
+        showLoginModal={showLoginModal}
+        setShowLoginModal={setShowLoginModal} />
         <Signup showSignupModal={showSignupModal} />
         <Search showSearchModal={showSearchModal} />
         <Switch>
