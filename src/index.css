@@ -1,15 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -17,18 +17,42 @@ code {
   box-sizing: border-box;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
 
 [class*="col-"] {
   float: left;
@@ -127,7 +151,8 @@ code {
   margin: 0;
 }
 
-.navbar a:hover, .subnav:hover .subnavbtn {
+.navbar a:hover,
+.subnav:hover .subnavbtn {
   background-color: #98acf8;
 }
 
@@ -190,7 +215,12 @@ code {
   box-sizing: border-box;
   text-align: center;
   background-color: #98acf8;
-  height: 50px;
+  padding: 8px;
+  height: 2%;
+}
+
+.ad-banner-content {
+  height: 90%;
 }
 
 .search-modal {
@@ -219,7 +249,7 @@ code {
 .shop-container-image {
   box-sizing: border-box;
   height: 290px;
-  background-image: url('./assets/lollipop.jpg');
+  background-image: url("./assets/lollipop.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -260,7 +290,7 @@ code {
   bottom: 0;
   object-fit: contain;
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .figure:hover .item-thumbnail-alt {
@@ -291,7 +321,7 @@ code {
   /* width: 500px; */
   /* left:0; */
   opacity: 0;
-  transition: opacity .35s ease;
+  transition: opacity 0.35s ease;
   z-index: 1;
 
   background-color: #51c4d3;
@@ -303,7 +333,7 @@ code {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
 }
 
 .add-to-cart-div:hover .add-to-cart-btn {
@@ -368,7 +398,7 @@ code {
   padding: 0px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   /* box-sizing: border-box; */
   /* display: block; */
   width: 25px;
@@ -379,10 +409,10 @@ input[type=checkbox] {
   -webkit-appearance: none;
   outline: 0;
 }
-input[type=checkbox]:checked {
+input[type="checkbox"]:checked {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="checkbox-3-icon" fill="%23000" d="M81,81v350h350V81H81z M227.383,345.013l-81.476-81.498l34.69-34.697l46.783,46.794l108.007-108.005 l34.706,34.684L227.383,345.013z"/></svg>');
 }
-input[type=checkbox]:not(:checked) {
+input[type="checkbox"]:not(:checked) {
   background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="checkbox-9-icon" d="M391,121v270H121V121H391z M431,81H81v350h350V81z"></path> </svg>');
 }
 
