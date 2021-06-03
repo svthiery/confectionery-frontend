@@ -333,7 +333,8 @@ code {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New"; */
+  font-family: inherit;
 }
 
 .add-to-cart-div:hover .add-to-cart-btn {
@@ -464,6 +465,23 @@ input[type="checkbox"]:not(:checked) {
   width: 80%;
   margin: auto;
   color: white;
+}
+
+.login-form-label {
+  font-size: 12px;
+  text-align: left;
+}
+
+.login-input {
+  height: 20px;
+  font-size: 18px;
+  font-family: inherit;
+  color: gray;
+}
+
+.username-div,
+.password-div {
+  padding: 5px;
 }
 
 .signup-modal {

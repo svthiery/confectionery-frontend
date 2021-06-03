@@ -103,7 +103,9 @@ function App() {
         />
         <Login 
         showLoginModal={showLoginModal}
-        setShowLoginModal={setShowLoginModal} />
+        setShowLoginModal={setShowLoginModal} 
+        setCurrentUser={setCurrentUser}
+        />
         <Signup showSignupModal={showSignupModal} />
         <Search showSearchModal={showSearchModal} />
         <Switch>
