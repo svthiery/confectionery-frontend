@@ -30,11 +30,11 @@ function Header({ showCartModal, setShowCartModal, currentOrder, setShowLoginMod
       </h1>
       <div className="row">
         <div className="bag-search-profile-links col-1">
-          <img
+          {/* <img
             src={ProfileIcon}
             className="bag-search-profile-icon col-4"
             onClick={handleProfileClick}
-          ></img>
+          ></img> */}
           <div className="bag-container col-4" onClick={handleCartClick}>
             <img
               src={ShoppingBag}
@@ -45,6 +45,11 @@ function Header({ showCartModal, setShowCartModal, currentOrder, setShowLoginMod
           <img
             src={MagnifyingGlass}
             className="bag-search-profile-icon col-4"
+          ></img>
+          <img
+            src={ProfileIcon}
+            className="bag-search-profile-icon col-4"
+            onClick={handleProfileClick}
           ></img>
         </div>
         <NavBar />

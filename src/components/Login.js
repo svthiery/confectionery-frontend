@@ -34,7 +34,7 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
     <div className="login-modal">
       <AnimatePresence>
         {showLoginModal && (
-          <div className="px-5 fixed h-full w-full flex items-center justify-center top-0 left-0">
+          <div>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{
@@ -46,7 +46,6 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
                 opacity: 0,
               }}
               transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="absolute z-10 p-5 bg-indigo-600 h-auto w-full max-w-md rounded text-white"
             >
               <button
                 onClick={() =>
@@ -58,7 +57,7 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
               </button>
               <div className="login-modal-content">
                 <form onSubmit={handleSubmit} autoComplete="off">
-                  <h2>Login</h2>
+                  <h2 className="login-text">Login</h2>
                   <div className="username-div">
                     <label className="login-form-label">Username </label>
                     <br></br>
@@ -81,7 +80,7 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
                         onChange={handleChange}
                     />
                   </div>
-                  <input type="submit" value="Login" className="login-signup-btn"/>
+                  <input type="submit" value="Log In" className="login-signup-btn"/>
                 </form>
               </div>
             </motion.div>

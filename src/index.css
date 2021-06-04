@@ -449,23 +449,46 @@ input[type="checkbox"]:not(:checked) {
 .login-modal {
   box-sizing: border-box;
   opacity: 1;
-  position: fixed;
+  position: absolute;
   background: #51c4d3;
-  width: 30%;
-  height: 35%;
-  top: 30%;
-  left: 70%;
+  width: 220px;
+  height: 240px;
+  top: 40%;
+  left: 90%;
   /* right: 0%; */
   transform: translate(-50%, -50%);
   /* text-align: center; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.login-modal:after {
+	bottom: 100%;
+	left: 80%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #51c4d3;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
 .login-modal-content {
-  height: 80%;
+  max-height: inherit;
+  /* height: 80%; */
   width: 80%;
+  padding: 5px;
   margin: auto;
+  background-color: #51c4d3;
   color: white;
+  box-sizing:border-box;
+}
+
+.login-text {
+  margin: 0px;
 }
 
 .login-form-label {
@@ -482,13 +505,13 @@ input[type="checkbox"]:not(:checked) {
 
 .username-div,
 .password-div {
-  padding: 5px;
+  padding: 0px 2px;
 }
 
 .login-signup-btn, .close-btn {
   box-sizing: border-box;
   /* display: inline-block; */
-  margin: 4 auto;
+  margin: 4px auto;
   /* position: absolute; */
   /* width: 500px; */
   /* left:0; */
@@ -502,7 +525,7 @@ input[type="checkbox"]:not(:checked) {
   padding: 8px 22px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 12px;
   font-weight: bold;
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New"; */
@@ -514,8 +537,9 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .close-btn {
-  margin: 7px;
-  padding: 3px;
+  /* margin: 7px; */
+  padding: 0px 10px;
+  text-align: top;
   font-size: 25px;
   background-color: #51c4d3;
 }
