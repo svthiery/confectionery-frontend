@@ -52,7 +52,7 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
                 onClick={() =>
                   setShowLoginModal((showLoginModal) => !showLoginModal)
                 }
-                className="absolute top-0 right-0 -mt-4 -mr-4 bg-white text-indigo-600 border border-indigo-600 h-8 w-8 block mb-2 rounded-full"
+                className="close-btn"
               >
                 &times;
               </button>
@@ -81,7 +81,7 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
                         onChange={handleChange}
                     />
                   </div>
-                  <input type="submit" value="Login" />
+                  <input type="submit" value="Login" className="login-signup-btn"/>
                 </form>
               </div>
             </motion.div>

@@ -457,7 +457,7 @@ input[type="checkbox"]:not(:checked) {
   left: 70%;
   /* right: 0%; */
   transform: translate(-50%, -50%);
-  text-align: center;
+  /* text-align: center; */
 }
 
 .login-modal-content {
@@ -474,14 +474,49 @@ input[type="checkbox"]:not(:checked) {
 
 .login-input {
   height: 20px;
-  font-size: 18px;
+  font-size: 12px;
   font-family: inherit;
-  color: gray;
+  color:black;
 }
 
 .username-div,
 .password-div {
   padding: 5px;
+}
+
+.login-signup-btn, .close-btn {
+  box-sizing: border-box;
+  /* display: inline-block; */
+  margin: 4 auto;
+  /* position: absolute; */
+  /* width: 500px; */
+  /* left:0; */
+  /* opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1; */
+
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 8px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New"; */
+  font-family: inherit;
+}
+
+.login-signup-btn:hover {
+  background-color: #fed049;
+}
+
+.close-btn {
+  margin: 7px;
+  padding: 3px;
+  font-size: 25px;
+  background-color: #51c4d3;
 }
 
 .signup-modal {
