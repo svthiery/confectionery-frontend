@@ -458,6 +458,7 @@ input[type="checkbox"]:not(:checked) {
   /* right: 0%; */
   transform: translate(-50%, -50%);
   /* text-align: center; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .login-modal-content {
