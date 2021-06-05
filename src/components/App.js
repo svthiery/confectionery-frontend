@@ -42,6 +42,14 @@ function App() {
   }, []);
 
   useEffect(() => {
+    fetch("https://gentle-depths-95024.herokuapp.com/me")
+      .then(r => r.json())
+      .then(user => {
+        setCurrentUser(user)
+      })
+  }, [])
+
+  useEffect(() => {
     // Need to add conditional here, so if user is logged in, fetch their orders and if there is an open order, those items will be in the cart
     fetch("https://gentle-depths-95024.herokuapp.com/orders", {
       method: "POST",
