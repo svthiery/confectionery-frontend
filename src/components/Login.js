@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useHistory } from "react-router-dom";
+import ReactLoading from 'react-loading';
 
 function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
 
@@ -7,6 +9,8 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
         username: "",
         password: "",
       });
+
+      const [isLoginLoading, setIsLoginLoading] = useState(false);
     
       function handleChange(e) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,6 +18,8 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
     
       function handleSubmit(e) {
         e.preventDefault();
+        setIsLoginLoading(true)
+        console.log(formData)
         // TODO: login the user
         // POST /login
         fetch("https://gentle-depths-95024.herokuapp.com/login", {
@@ -25,6 +31,7 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
         })
           .then((r) => r.json())
           .then((user) => {
+              console.log(user)
             // use the response to set state
             setCurrentUser(user);
           });
@@ -55,6 +62,9 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
               >
                 &times;
               </button>
+              {isLoginLoading ? <div className="login-loading-animation">
+                    <ReactLoading type={"spokes"} color={"grey"} height={'15%'} width={'15%'}/>
+                </div> : null}
               <div className="login-modal-content">
                 <form onSubmit={handleSubmit} autoComplete="off">
                   <h2 className="login-text">Login</h2>
