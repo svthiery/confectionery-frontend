@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 import ReactLoading from 'react-loading';
 
-function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
+function Login({ showLoginModal, setShowLoginModal, setCurrentUser, currentUser }) {
 
     const [formData, setFormData] = useState({
         username: "",
@@ -31,9 +31,8 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
         })
           .then((r) => r.json())
           .then((user) => {
-              console.log(user)
-            // use the response to set state
             setCurrentUser(user);
+            setIsLoginLoading(false)
           });
       }
 
@@ -66,7 +65,10 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
                     <ReactLoading type={"spokes"} color={"grey"} height={'15%'} width={'15%'}/>
                 </div> : null}
               <div className="login-modal-content">
-                <form onSubmit={handleSubmit} autoComplete="off">
+                {currentUser ? <div>
+                    <p>Signed in as {currentUser.username}</p>
+                    <button className="login-signup-btn" onClick={() => setCurrentUser(null)}>Log Out</button>
+                </div> : <form onSubmit={handleSubmit} autoComplete="off">
                   <h2 className="login-text">Login</h2>
                   <div className="username-div">
                     <label className="login-form-label">Username </label>
@@ -91,7 +93,7 @@ function Login({ showLoginModal, setShowLoginModal, setCurrentUser }) {
                     />
                   </div>
                   <input type="submit" value="Log In" className="login-signup-btn"/>
-                </form>
+                </form>}
               </div>
             </motion.div>
             <motion.div
