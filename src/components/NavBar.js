@@ -18,9 +18,9 @@ function NavBar() {
             ABOUT <i class="fa fa-caret-down"></i>
           </button>
           <div class="subnav-content">
-            <a href="https://www.linkedin.com/in/svk12/">LinkedIn</a>
-            <a href="https://github.com/svthiery">GitHub</a>
-            <a href="mailto:sarahvthiery@gmail.com">Email Me</a>
+            <a href="https://www.linkedin.com/in/svk12/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/svthiery" target="_blank">GitHub</a>
+            <a href="mailto:sarahvthiery@gmail.com" target="_blank">Email Me</a>
           </div>
         </div>
       </nav>
