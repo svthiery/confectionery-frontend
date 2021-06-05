@@ -1,5 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51Iz605Hg3ejnjMiay6z8XxHLpNimb2lMAOPxxThF1Ge4NUWcJBXfBRpwhiW5s8tXWiV3Y3md53aR1OSrH8g0I8ih00YVFeje3F');
+
 
 function Cart ({ showCartModal, setShowCartModal, currentOrder, setCurrentOrder }) {
     // const toRender = showCartModal ? <div className="cart">Cart</div> : null
@@ -51,6 +55,7 @@ function Cart ({ showCartModal, setShowCartModal, currentOrder, setCurrentOrder 
             <div>{currentCart}</div>
             <h4>Total ${currentTotal}</h4>
           </div>
+          {currentOrder.candyOrders.length > 0 ? <button className="login-signup-btn" role="link">Check Out</button> : null}
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
