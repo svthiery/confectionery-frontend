@@ -593,11 +593,13 @@ input[type="checkbox"]:not(:checked) {
   opacity: 1;
   position: fixed;
   background: #51c4d3;
-  width: 30%;
+  color: white;
+  width: 25%;
   height: 100%;
   top: 0%;
-  left: 70%;
+  left: 75%;
   right: 0%;
+  padding: 20px;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
 }

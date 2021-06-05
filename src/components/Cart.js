@@ -14,6 +14,13 @@ function Cart ({ showCartModal, setShowCartModal, currentOrder, setCurrentOrder 
         null
         // console.log(currentOrder)
         // console.log(currentCart)
+
+        const costsArray = currentOrder ? currentOrder.candyOrders.map(candyOrder => {
+          return candyOrder.candy.price
+        }) :
+        null
+
+        const currentTotal = currentOrder ? costsArray.reduce(( accumulator, currentValue ) => accumulator + currentValue, 0) : 0
         
     function handleCloseCart() {
         setShowCartModal(false)
@@ -31,16 +38,19 @@ function Cart ({ showCartModal, setShowCartModal, currentOrder, setCurrentOrder 
             x: "100%"
           }}
           transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-          className="cart fixed bg-indigo-600 text-white shadow-lg top-0 right-0 w-full max-w-sm h-screen p-5"
+          className="cart"
         >
           <button
             onClick={handleCloseCart}
-            className="bg-white text-black h-8 w-8 block mb-2 rounded-full"
+            className="close-btn"
           >
             &times;
           </button>
-          <h2 className="text-4xl capitalize leading-loose">Your Cart</h2>
-          <div>{currentCart}</div>
+          <h2>Your Bag</h2>
+          <div>
+            <div>{currentCart}</div>
+            <h4>Total ${currentTotal}</h4>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
