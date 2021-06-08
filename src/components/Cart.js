@@ -16,8 +16,6 @@ function Cart ({ showCartModal, setShowCartModal, currentOrder, setCurrentOrder 
             )
         }) :
         null
-        // console.log(currentOrder)
-        // console.log(currentCart)
 
         const costsArray = currentOrder ? currentOrder.candyOrders.map(candyOrder => {
           return candyOrder.candy.price
