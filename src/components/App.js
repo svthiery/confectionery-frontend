@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import ReactLoading from 'react-loading';
+import ReactLoading from "react-loading";
 import logo from "../logo.svg";
 import "../App.css";
 import Header from "./Header";
@@ -28,7 +28,7 @@ function App() {
 
   const [viewedItem, setViewedItem] = useState(null);
 
-  const [isItemsLoading, setIsItemsLoading] = useState(true)
+  const [isItemsLoading, setIsItemsLoading] = useState(true);
 
   // ----------- USE EFFECTS ------------------------------------
 
@@ -43,11 +43,11 @@ function App() {
 
   useEffect(() => {
     fetch("https://gentle-depths-95024.herokuapp.com/me")
-      .then(r => r.json())
-      .then(user => {
-        setCurrentUser(user)
-      })
-  }, [])
+      .then((r) => r.json())
+      .then((user) => {
+        setCurrentUser(user);
+      });
+  }, []);
 
   useEffect(() => {
     // Need to add conditional here, so if user is logged in, fetch their orders and if there is an open order, those items will be in the cart
@@ -74,16 +74,16 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ order_id: currentOrder.id, candy_id: item.id}),
+      body: JSON.stringify({ order_id: currentOrder.id, candy_id: item.id }),
     })
       .then((response) => response.json())
       .then((candyOrderObj) => {
-        const updatedCandies = [...currentOrder.candyOrders, candyOrderObj]
-        setCurrentOrder({...currentOrder, candyOrders: updatedCandies})
-        setShowCartModal(true)
+        const updatedCandies = [...currentOrder.candyOrders, candyOrderObj];
+        setCurrentOrder({ ...currentOrder, candyOrders: updatedCandies });
+        setShowCartModal(true);
       });
   }
-  console.log(currentOrder)
+  console.log(currentOrder);
   // function addItemToOrder(item) {
   //   fetch("http://localhost:3001/orders", {
   //     method: "PATCH",
@@ -108,11 +108,11 @@ function App() {
           currentOrder={currentOrder}
           setShowLoginModal={setShowLoginModal}
         />
-        <Login 
-        showLoginModal={showLoginModal}
-        setShowLoginModal={setShowLoginModal} 
-        setCurrentUser={setCurrentUser}
-        currentUser={currentUser}
+        <Login
+          showLoginModal={showLoginModal}
+          setShowLoginModal={setShowLoginModal}
+          setCurrentUser={setCurrentUser}
+          currentUser={currentUser}
         />
         <Signup showSignupModal={showSignupModal} />
         <Search showSearchModal={showSearchModal} />
