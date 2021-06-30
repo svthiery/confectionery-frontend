@@ -68,7 +68,6 @@ function App() {
   // ----------- CART --------------------------------------------
 
   function handleAddToCart(item) {
-    // console.log(item);
     // console.log(currentOrder.id)
     fetch("https://gentle-depths-95024.herokuapp.com/candy_orders", {
       method: "POST",
