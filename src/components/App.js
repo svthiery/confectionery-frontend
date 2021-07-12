@@ -50,6 +50,20 @@ function App() {
   }, []);
 
   useEffect(() => {
+    fetch("https://gentle-depths-95024.herokuapp.com/visits", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ user_id: currentUser ? currentUser.id : null }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+  }, []);
+
+  useEffect(() => {
     // Need to add conditional here, so if user is logged in, fetch their orders and if there is an open order, those items will be in the cart
     fetch("https://gentle-depths-95024.herokuapp.com/orders", {
       method: "POST",
