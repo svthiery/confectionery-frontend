@@ -55,7 +55,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ user_id: 1 }),
+      body: JSON.stringify({ user_id: currentUser ? currentUser.id : 0 }),
     })
       .then((response) => response.json())
       .then((data) => {
