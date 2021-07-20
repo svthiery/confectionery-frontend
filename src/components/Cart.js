@@ -41,6 +41,27 @@ function Cart({
     setShowCartModal(false);
   }
 
+  const handleCheckOut = async (event) => {
+    // Get Stripe.js instance
+    const stripe = await stripePromise;
+
+    // Call your backend to create the Checkout Session
+    const response = await fetch('http://localhost:4242/create-checkout-session', { method: 'POST' });
+
+    const session = await response.json();
+
+    // When the customer clicks on the button, redirect them to Checkout.
+    const result = await stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer
+      // using `result.error.message`.
+    }
+  };
+
   const toRender = showCartModal ? (
     <AnimatePresence>
       {showCartModal && (
@@ -65,7 +86,7 @@ function Cart({
               <h4>Total ${currentTotal}</h4>
             </div>
             {currentOrder.candyOrders.length > 0 ? (
-              <button className="login-signup-btn" role="link">
+              <button className="login-signup-btn" onClick={handleCheckOut} role="link">
                 Check Out
               </button>
             ) : null}
