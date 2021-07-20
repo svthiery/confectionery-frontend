@@ -46,7 +46,7 @@ function Cart({
     const stripe = await stripePromise;
 
     // Call your backend to create the Checkout Session
-    const response = await fetch('http://localhost:4242/create-checkout-session', { method: 'POST' });
+    const response = await fetch('http://gentle-depths-95024.herokuapp.com/create-checkout-session', { method: 'POST' });
 
     const session = await response.json();
 
