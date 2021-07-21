@@ -52,7 +52,8 @@ function Cart({
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(currentOrder.candyOrders[0].candy) }
+      // body: JSON.stringify(currentOrder.candyOrders[0].candy) }
+      body: JSON.stringify(currentOrder.candyOrders) }
     );
 
     const session = await response.json();
