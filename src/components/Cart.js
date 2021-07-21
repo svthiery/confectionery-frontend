@@ -46,7 +46,14 @@ function Cart({
     const stripe = await stripePromise;
 
     // Call your backend to create the Checkout Session
-    const response = await fetch('https://gentle-depths-95024.herokuapp.com/create-checkout-session', { method: 'POST' });
+    const response = await fetch(
+      "http://localhost:4242/create-checkout-session",
+      { method: "POST", 
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(currentOrder.candyOrders[0].candy) }
+    );
 
     const session = await response.json();
 
@@ -86,7 +93,11 @@ function Cart({
               <h4>Total ${currentTotal}</h4>
             </div>
             {currentOrder.candyOrders.length > 0 ? (
-              <button className="login-signup-btn" onClick={handleCheckOut} role="link">
+              <button
+                className="login-signup-btn"
+                onClick={handleCheckOut}
+                role="link"
+              >
                 Check Out
               </button>
             ) : null}
