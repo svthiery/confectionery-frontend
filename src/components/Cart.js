@@ -47,7 +47,7 @@ function Cart({
 
     // Call your backend to create the Checkout Session
     const response = await fetch(
-      "http://localhost:4242/create-checkout-session",
+      "https://gentle-depths-95024.herokuapp.com/create-checkout-session",
       { method: "POST", 
       headers: {
         "Content-Type": "application/json",
