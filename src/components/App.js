@@ -121,6 +121,7 @@ function App() {
           setShowCartModal={setShowCartModal}
           currentOrder={currentOrder}
           setShowLoginModal={setShowLoginModal}
+          setShowSearchModal={setShowSearchModal}
         />
         <Login
           showLoginModal={showLoginModal}

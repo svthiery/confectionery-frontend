@@ -5,7 +5,13 @@ import ShoppingBag from "../assets/shopping_bag.jpg";
 import MagnifyingGlass from "../assets/search_icon.png";
 import ProfileIcon from "../assets/profile_icon.png";
 
-function Header({ showCartModal, setShowCartModal, currentOrder, setShowLoginModal }) {
+function Header({
+  showCartModal,
+  setShowCartModal,
+  currentOrder,
+  setShowLoginModal,
+  setShowSearchModal
+}) {
   const history = useHistory();
 
   function handleClickLogo() {
@@ -18,6 +24,10 @@ function Header({ showCartModal, setShowCartModal, currentOrder, setShowLoginMod
 
   function handleProfileClick() {
     setShowLoginModal(true);
+  }
+
+  function handleSearchClick() {
+    setShowSearchModal(true);
   }
 
   const numItems = currentOrder ? currentOrder.candyOrders.length : "0";
@@ -45,6 +55,7 @@ function Header({ showCartModal, setShowCartModal, currentOrder, setShowLoginMod
           <img
             src={MagnifyingGlass}
             className="bag-search-profile-icon col-4"
+            onClick={handleSearchClick}
           ></img>
           <img
             src={ProfileIcon}
