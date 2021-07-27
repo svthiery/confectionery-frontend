@@ -1,6 +1,9 @@
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Search({ showSearchModal }) {
+
+    const [search, setSearch] = useState("")
 
     // const toRender = showSearchModal ? <div className="search-modal col-12">Search</div> : null
     const toRender = showSearchModal ? 
