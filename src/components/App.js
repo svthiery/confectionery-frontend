@@ -122,6 +122,7 @@ function App() {
           currentOrder={currentOrder}
           setShowLoginModal={setShowLoginModal}
           setShowSearchModal={setShowSearchModal}
+          showSearchModal={showSearchModal}
         />
         <Login
           showLoginModal={showLoginModal}

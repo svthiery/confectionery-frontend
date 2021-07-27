@@ -10,7 +10,8 @@ function Header({
   setShowCartModal,
   currentOrder,
   setShowLoginModal,
-  setShowSearchModal
+  setShowSearchModal,
+  showSearchModal
 }) {
   const history = useHistory();
 
@@ -27,7 +28,7 @@ function Header({
   }
 
   function handleSearchClick() {
-    setShowSearchModal(true);
+    setShowSearchModal(!showSearchModal);
   }
 
   const numItems = currentOrder ? currentOrder.candyOrders.length : "0";
