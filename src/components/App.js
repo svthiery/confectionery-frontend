@@ -30,6 +30,10 @@ function App() {
 
   const [isItemsLoading, setIsItemsLoading] = useState(true);
 
+  // ----------- SEARCH -----------------------------------------
+
+  const [search, setSearch] = useState("")
+
   // ----------- USE EFFECTS ------------------------------------
 
   useEffect(() => {
@@ -131,7 +135,7 @@ function App() {
           currentUser={currentUser}
         />
         <Signup showSignupModal={showSignupModal} />
-        <Search showSearchModal={showSearchModal} />
+        <Search showSearchModal={showSearchModal} search={search} setSearch={setSearch}/>
         <Switch>
           <Route path="/shop/:itemId">
             <ItemPage
