@@ -20,6 +20,9 @@ function Search({ showSearchModal, search, setSearch }) {
           transition={{ type: "spring", bounce: 0, duration: 2 }}
           className="search-modal col-12"
         >
+            <div>
+                <input value={search} onChange={(e) => setSearch(e.target.value)}></input>
+            </div>
         </motion.div>
         {/* <motion.div
           initial={{ opacity: 0 }}
