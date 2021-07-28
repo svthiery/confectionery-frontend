@@ -19,7 +19,7 @@ function Search({ showSearchModal }) {
           exit={{
             y: "0%",
           }}
-          transition={{ type: "spring", bounce: 0, duration: 0.6 }}
+          transition={{ type: "spring", bounce: 0, duration: 2 }}
           className="search-modal col-12"
         >
         </motion.div>

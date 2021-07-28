@@ -57,7 +57,7 @@ code {
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -249,7 +249,7 @@ code {
   box-sizing: border-box;
   height: 50px;
   padding: 0;
-  background-color: pink;
+  background-color: black;
   color: white;
   /* top: 0; */
   /* transform: translate(-50%, -50%); */
