@@ -25,6 +25,7 @@ function App() {
   // ----------- ITEMS --------------------------------------
 
   const [allItems, setAllItems] = useState([]);
+  const [allSearchedItems, setAllSearchedItems] = useState([]);
 
   const [viewedItem, setViewedItem] = useState(null);
 
@@ -34,6 +35,14 @@ function App() {
 
   const [search, setSearch] = useState("")
 
+  const filteredBySearch = allItems.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+  console.log(filteredBySearch)
+
+  useEffect(() => {
+    console.log("hello")
+    setAllSearchedItems(filteredBySearch)
+  }, [search])
+
   // ----------- USE EFFECTS ------------------------------------
 
   useEffect(() => {
@@ -41,6 +50,7 @@ function App() {
       .then((response) => response.json())
       .then((candiesArr) => {
         setAllItems(candiesArr);
+        setAllSearchedItems(candiesArr);
         setIsItemsLoading(false);
       });
   }, []);
@@ -146,7 +156,7 @@ function App() {
           </Route>
           <Route path="/">
             <ShopContainer
-              allItems={allItems}
+              allItems={allSearchedItems}
               viewedItem={viewedItem}
               setViewedItem={setViewedItem}
               showCartModal={showCartModal}
