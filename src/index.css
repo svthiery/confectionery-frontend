@@ -76,7 +76,6 @@ code {
     transform: translate(-50%, -50%);
   }
 
-
 }
 
 @media only screen and (max-width: 1300px) {
@@ -247,14 +246,23 @@ code {
 
 .search-modal {
   box-sizing: border-box;
-  height: 55px;
-  padding: 0;
+  height: 54px;
+  padding: 10px;
   background-color: black;
   color: white;
   /* top: 0; */
   /* transform: translate(-50%, -50%); */
   width: 100%;
   /* top: 30%; */
+}
+
+.search-input {
+  float: right;
+  margin: auto;
+  height: 25px;
+  font-size: 25px;
+  font-family: inherit;
+  color:black;
 }
 
 /* SHOP CONTAINER, ITEM CONTAINER, ITEM TILES */
