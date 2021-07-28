@@ -10,10 +10,10 @@ The Confectionery uses the following technologies:
 
 ### Frontend
 
-React, React Router, Custom CSS, CSS media queries
+React, React Router, Custom CSS, CSS media queries, Stripe API
 
 ### Backend
 
-Ruby, Rails, PostgreSQL
+Ruby, Rails, PostgreSQL, Stripe API
 
 ## Features
