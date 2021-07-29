@@ -7,10 +7,10 @@ function NavBar() {
             SHOP <i class="fa fa-caret-down"></i>
           </button>
           <div class="subnav-content">
-            <a href="#bring">Candy</a>
-            <a href="#deliver">Chocolate</a>
-            <a href="#package">Best Sellers</a>
-            <a href="#express">Sale</a>
+            <a href="#candy">Candy</a>
+            <a href="#chocolate">Chocolate</a>
+            <a href="#bestsellers">Best Sellers</a>
+            <a href="#sale">Sale</a>
           </div>
         </div>
         <div class="subnav subnav-about">
