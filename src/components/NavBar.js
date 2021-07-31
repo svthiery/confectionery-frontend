@@ -10,7 +10,7 @@ function NavBar() {
             <a href="#candy">Candy</a>
             <a href="#chocolate">Chocolate</a>
             <a href="#bestsellers">Best Sellers</a>
-            <a href="#sale">Sale</a>
+            {/* <a href="#sale">Sale</a> */}
           </div>
         </div>
         <div class="subnav subnav-about">
