@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import ReactLoading from "react-loading";
-import Sort from "./Sort";
+// import Sort from "./Sort";
 import FilterContainer from "./FilterContainer";
 import ItemContainer from "./ItemContainer";
 
@@ -10,7 +10,6 @@ function ShopContainer({
   viewedItem,
   setViewedItem,
   showCartModal,
-  setShowCartModal,
   handleAddToCart,
   isItemsLoading,
 }) {
