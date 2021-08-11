@@ -40,6 +40,10 @@ function ShopContainer({
   const [flavorsSelected, setFlavorsSelected] = useState(flavorList);
 
   function handleCheckBox(flavor) {
+    // isFlavorAlreadySelected = figure it out
+    // if (alreadySelected) - remove from array
+    // else - add to array
+
     if (flavorsSelected.length === flavorList.length) {
       const filteredFlavorList = [flavor];
       setFlavorsSelected(filteredFlavorList);
