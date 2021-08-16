@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import ReactLoading from "react-loading";
-// import logo from "../logo.svg";
 import "../App.css";
 import Header from "./Header";
 import ShopContainer from "./ShopContainer";
@@ -33,15 +32,17 @@ function App() {
 
   // ----------- SEARCH -----------------------------------------
 
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
 
-  const filteredBySearch = allItems.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
-  console.log(filteredBySearch)
+  const filteredBySearch = allItems.filter((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
+  console.log(filteredBySearch);
 
   useEffect(() => {
-    console.log("hello")
-    setAllSearchedItems(filteredBySearch)
-  }, [search])
+    console.log("hello");
+    setAllSearchedItems(filteredBySearch);
+  }, [search]);
 
   // ----------- USE EFFECTS ------------------------------------
 
@@ -74,7 +75,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success new visit:", data);
-      })
+      });
   }, []);
 
   useEffect(() => {
@@ -145,7 +146,11 @@ function App() {
           currentUser={currentUser}
         />
         <Signup showSignupModal={showSignupModal} />
-        <Search showSearchModal={showSearchModal} search={search} setSearch={setSearch}/>
+        <Search
+          showSearchModal={showSearchModal}
+          search={search}
+          setSearch={setSearch}
+        />
         <Switch>
           <Route path="/shop/:itemId">
             <ItemPage
